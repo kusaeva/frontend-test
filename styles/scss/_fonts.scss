@@ -5,6 +5,10 @@
 }
 @font-face {
   font-family: $font-main;
-  font-weight: bold;
   src: url(../../fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: $font-main;
+  src: url(../../fonts/Raleway-Regular.ttf);
 }

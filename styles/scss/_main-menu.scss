@@ -1,19 +1,20 @@
 
 .main-menu {
-  font: $font-main-size $font-main;
+  font: bold $font-main-size $font-main;
   width: 100%;
   height: 68px;
-  padding-left: $padding-main;
-  padding-right: $padding-main;
+  padding-left: $padding-main-left - $frame-size;
+  padding-right: $padding-main-right - $frame-size;
   margin: 0;
   list-style: none;
   text-align: center;
+  position: absolute;
+  bottom:0;
+  z-index: 3;
   @include flexbox();
   @include flex-direction(row);
-  @include flex(1 1 100%);
   @include justify-content(space-between);
   @include align-items(stretch);
-
   .item {
     border-right: 1px solid #d1d1ca;
     @include flexbox();
