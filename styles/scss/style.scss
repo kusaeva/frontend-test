@@ -1,35 +1,11 @@
-$font-menu: DidotLH;
-$default-font: Raleway;
-$bg-color: #e0dccd;
+@import 'variables';
+@import 'mixins';
+@import 'flexbox';
 
-@font-face {
-    font-family: $font-menu;
-    src: url(../fonts/Didot_Italic.ttf);
-}
+@import 'fonts';
+@import 'header';
+@import 'main-menu';
 
-@mixin box-shadow ($t, $x, $y, $blur, $color) {
-    -moz-box-shadow: $t $x $y $blur $color;
-    -webkit-box-shadow: $t $x $y $blur $color;
-    box-shadow: $t $x $y $blur $color;
-}
-
-@mixin box-shadow-vignette ($t, $x, $y, $blur, $spread, $color) {
-    -moz-box-shadow: $t $x $y $blur $spread $color;
-    -webkit-box-shadow: $t $x $y $blur $spread $color;
-    box-shadow: $t $x $y $blur $spread $color;
-}
-
-@mixin linear-gradient($direction, $color-stops...) {
-  // Direction has been omitted and happens to be a color-stop
-  @if is-direction($direction) == false {
-    $color-stops: $direction, $color-stops;
-    $direction: 180deg;
-  }
-
-  background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background: linear-gradient($direction, $color-stops);
-}
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -43,56 +19,4 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-header {
-  margin: 4%;
-
-  .header-bg {
-    height: 100vh;
-    background: url(../../img/splashscreen.jpg) no-repeat center;
-    background-size: cover;
-    position: relative;
-  }
-  .overlay {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .vignette {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    @include box-shadow-vignette(inset, 0, 0, 300px, 100px, rgba(0,0,0,0.6));
-  }
-
-  .text-block {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: stretch;
-  }
-
-  .logo {
-    position: relative;
-    left: 30px; top: 24px;
-    flex: auto;
-  }
-  .welcome {
-    font-weight: bolder;
-    font-size: 62px;
-    font-family: $default-font;
-    color: white;
-    align-self: center;
-
-
-  }
 }

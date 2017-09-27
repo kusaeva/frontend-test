@@ -1,0 +1,50 @@
+@mixin box-shadow ($t, $x, $y, $blur, $color) {
+    -moz-box-shadow: $t $x $y $blur $color;
+    -webkit-box-shadow: $t $x $y $blur $color;
+    box-shadow: $t $x $y $blur $color;
+}
+
+@mixin box-shadow-vignette ($t, $x, $y, $blur, $spread, $color) {
+    -moz-box-shadow: $t $x $y $blur $spread $color;
+    -webkit-box-shadow: $t $x $y $blur $spread $color;
+    box-shadow: $t $x $y $blur $spread $color;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin transform-origin ($origin) {
+     -moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
