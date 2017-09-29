@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <link rel='stylesheet' type='text/css' href='styles/css/normalize.css'>
     <link rel='stylesheet' type='text/css' href='styles/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
     <title>Vapiano</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
             </div>
             <div class="center-block">
               <div class="welcome">WELCOME</div>
-              <div >
+              <div class="phone-line">
                 <div class="underline"></div>
                 <div class='phone'>TELEFONISCHE RESERVIERUNGEN: +43 1 406 59 13</div>
               </div>
@@ -40,7 +41,48 @@
       </div>
     </header>
 
-    <section>
+    <!-- Lunch-menu -->
+    <section class='lunch-menu'>
+      <div class="header">
+        <div class="text">Mittagsmenü</div>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <div class="page">
+          <div class="dish"></div>
+          <div class="dish"></div>
+          <div class="dish"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class='contacts' id='contacts'>
+      <div class="header">
+        <div class="text">Kontakt</div>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <div class="contact-form">
+          <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name">
+
+            <label for="message">Message</label>
+            <textarea id="message" cols="30" rows="10"></textarea>
+
+            <button type='submit' id="send">
+            Send
+            </button>
+          </form>
+        </div>
+        <div class="map">
+
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -60,9 +102,6 @@
           </div>
         </div>
         <div class="column">
-           <img class='bartender' src='img/bartender.png' alt="bartender logo">
-        </div>
-        <div class="column">
           <div class="">
             <p>KONTAKT</p>
             <p>Telefon: +431 223333</p>
@@ -71,14 +110,31 @@
         </div>
         <div class="column">
           <div>
-            <p>web <img class='bartender-small' src='img/bartender.png' alt="bartender logo">  by</p>
+            <p>web <img class='bartender' src='img/bartender.png' alt="bartender logo">  by</p>
             <p>Goran     Ramljak</p>
           </div>
+        </div>
+      </div>
+      <div class="social-network">
+        <div class='text'>
+          <p class="big-text">
+            Become a member of
+          </p>
+          <p class="big-text">
+            Goran Ramljak dribbble page
+          </p>
+          <div class='decor'>
+            <div class="line"></div>
+          </div>
+          <p class="small-text">
+            and get all the information about new freebies...
+          </p>
         </div>
       </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/animatedScrollTo.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

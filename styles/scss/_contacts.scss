@@ -1,0 +1,44 @@
+.contacts {
+  font: 700 14px $font-main;
+  height: 100%;
+  width: 100%;
+  background-color: $light-gray;
+
+  .contact-form {
+    margin-top: 56px;
+    margin-bottom: 130px;
+  }
+  input[type=text] {
+    width: 286px;
+  }
+  textarea {
+    width: 465px;
+    resize: none;
+  }
+  button[type=submit] {
+    font: 700 14px $font-main;
+    cursor:pointer;
+    width: 200px;
+    height: 48px;
+    overflow: hidden;
+    outline:none;
+  }
+
+  input[type=text], textarea {
+    padding: 12px 12px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    display: block;
+
+    &:focus {
+      background-color: $white;
+      outline: none !important;
+    }
+  }
+
+  input[type=text], textarea, button {
+    border: 1px solid $beige;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+  }
+}

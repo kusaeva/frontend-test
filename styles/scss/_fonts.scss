@@ -1,14 +1,23 @@
+$font-italic: DidotLH;
+$font-main: Raleway;
 
 @font-face {
-  font-family: $font-header;
-  src: url(../../fonts/Didot_Italic.ttf);
+  font-family: $font-italic;
+  src: url(../../fonts/DidotLH.otf);
 }
 @font-face {
-  font-family: $font-main;
-  src: url(../../fonts/Raleway-Bold.ttf);
+font-family: $font-main, sans-serif;
 }
-
-@font-face {
-  font-family: $font-main;
-  src: url(../../fonts/Raleway-Regular.ttf);
-}
+// @font-face {
+//   font-family: $font-main;
+//   src: url(../../fonts/Raleway-ExtraBold.ttf);
+//   font-weight: 800;
+//   font-style: extra-bold;
+// }
+//
+// @font-face {
+//   font-family: $font-main;
+//   src: url(../../fonts/Raleway-Regular.ttf);
+//   font-weight: normal;
+//   font-style: normal;
+// }

@@ -1,5 +1,5 @@
 footer {
-  background-color: $footer-color;
+  background-color: $dark-gray;
   width: 100%;
   height: 422px;
   position: relative;
@@ -19,10 +19,10 @@ footer {
       width: 162px;
       height: 54px;
       padding-left: 12px;
-      font: 11px $font-main;
+      font: 400 11px $font-main;
       @include flex-direction(column);
       @include flexbox();
-      @include align-items(center );
+      @include align-items(center);
       @include flex(auto);
 
       div {
@@ -35,29 +35,46 @@ footer {
       }
       &:first-child{
         @include flexbox();
-      }
         @include align-items(flex-start);
+      }
       &:last-child{
         @include flexbox();
         @include align-items(flex-end);
       }
       .bartender {
-        width: 75px;
-        position: absolute;
-        bottom: 0;
-      }
-      .bartender-small {
         width: 33px;
       }
     }
   }
-  // div {
-  //   padding-left: $padding-main-left + 36px;
-  //   width: 100%;
-  //   height: 322px;
-  //   position: relative;
-  //   bottom: 165px;
-  //   background-color: $white;
-  //
-  // }
+  .social-network {
+    background-color: $white;
+    margin-left: $padding-main-left;
+    margin-right: $padding-main-right - 32px;
+    height: 320px;
+    margin-top: -66px;
+
+    .text {
+      position: relative;
+      top: 50px;
+      left: 50px;
+    }
+    p {
+      margin: 1px;
+    }
+    .big-text {
+      font: 36px $font-italic;
+    }
+    .small-text {
+      font: 18px $font-italic;
+    }
+    .decor {
+      height: 20px;
+      .line {
+        height: 1px;
+        width: 252px;
+        margin-top: 30px;
+        background-color: #f2ab7f;
+      }
+    }
+  }
 }
