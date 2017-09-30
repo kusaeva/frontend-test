@@ -6,6 +6,7 @@
   }
   .page {
     margin-top: 55px;
+    margin-bottom: 68px;
     height: 100%;
     $item-height: 282px;
     display: grid;
@@ -41,14 +42,39 @@
       }
       a {
         display: block;
+        bottom: 12px;
+        position: absolute;
       }
     }
     .image {
       position: absolute; top: $t; bottom: $t; right: $t;
       z-index: 1;
-      background:url(../../img/Layer-100.jpg) no-repeat;
       background-size: cover;
-      width:150px;
+      width: 150px;
+    }
+    .image1 {
+      background:url(../../img/pasta.jpg) no-repeat;
+      background-position: -74px;
+    }
+    .image2 {
+      background:url(../../img/beilagen.jpg) no-repeat;
+      background-position: -125px;
+    }
+    .image3 {
+      background:url(../../img/meals.jpg) no-repeat;
+      background-position: -74px;
+    }
+    .image4 {
+      background:url(../../img/salad.jpg) no-repeat;
+      background-position: -125px;
+    }
+    .image5 {
+      background:url(../../img/dessert.jpg) no-repeat;
+      background-position: -74px;
+    }
+    .image6 {
+      background:url(../../img/suppen.jpg) no-repeat;
+      background-position: -125px;
     }
     .title {
       font: 24px $font-italic;
