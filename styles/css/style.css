@@ -5,8 +5,10 @@
   font-family: Raleway, sans-serif; }
 header {
   margin: 50px; }
+  header .main {
+    height: calc(100vh - 50px); }
   header .header-bg {
-    height: 100vh;
+    height: 100%;
     background: url(../../img/splashscreen.jpg) no-repeat center;
     background-size: cover;
     position: relative; }
@@ -180,14 +182,53 @@ section {
   background-color: blue;
   border: 2px solid yellow; }
 
+.gallery {
+  width: 100%;
+  padding: 0; }
+  .gallery .header {
+    margin-left: 137px;
+    margin-right: 117px; }
+  .gallery .content {
+    position: relative;
+    height: 100%;
+    margin-top: -100px;
+    z-index: -1;
+    background-color: #ffffff;
+    padding-bottom: 8px; }
+    .gallery .content .gallery-slider img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: 30px solid #ffffff;
+      outline-offset: -30px; }
+
 .contacts {
   font: 700 14px Raleway;
   height: 100%;
   width: 100%;
   background-color: #d1d1ca; }
+  .contacts .content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between; }
   .contacts .contact-form {
     margin-top: 56px;
-    margin-bottom: 130px; }
+    margin-bottom: 130px;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
   .contacts input[type=text] {
     width: 286px; }
   .contacts textarea {
@@ -212,6 +253,17 @@ section {
     border: 1px solid #f2ab7f;
     background-color: Transparent;
     background-repeat: no-repeat; }
+  .contacts .google-map {
+    position: relative;
+    right: 0;
+    width: 470px;
+    height: 233px;
+    background: url(../../img/google_maps.jpg) no-repeat center;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
 
 footer {
   background-color: #1f1f21;

@@ -4,9 +4,17 @@
   width: 100%;
   background-color: $light-gray;
 
+  .content {
+    @include flexbox();
+    @include flex-flow(row);
+    @include justify-content(space-between);
+    
+  }
+
   .contact-form {
     margin-top: 56px;
     margin-bottom: 130px;
+    @include flex(0 1 auto);
   }
   input[type=text] {
     width: 286px;
@@ -40,5 +48,13 @@
     border: 1px solid $beige;
     background-color: Transparent;
     background-repeat:no-repeat;
+  }
+  .google-map {
+    position: relative;
+    right: 0;
+    width: 470px;
+    height: 233px;
+    background: url(../../img/google_maps.jpg) no-repeat center;
+    @include flex(0 1 auto);
   }
 }

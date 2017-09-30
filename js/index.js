@@ -1,53 +1,22 @@
-$(".main-menu .item").click(function() {
-  console.log("click");
-    $(".main-menu .item.current").removeClass("current");
-    $(this).addClass('current');
-});
+const scrollDuration = 400;
 
-// function scrollNav() {
-//   $(".main-menu .item").click(function(){
-//     //Toggle Class
-//     console.log($(this).attr('href'));
-//     $(".main-menu .item.current").removeClass("current");
-//     $(this).addClass('current');
-//
-//     //Animate
-//     $('html, body').stop().animate({
-//         scrollTop: $( $(this).attr('href') ).offset().
-//     }, 400);
-//     return false;
-//   });
-//   // $('.scrollTop a').scrollTop();
-// }
-// scrollNav();
+function onMenuItemClick (e) {
+  e.preventDefault ();
+  $(".main-menu .item.current").removeClass("current");
+  $(this).addClass('current');
+  let a = this.getElementsByTagName('a')[0];
+  if (a.href.slice(-1) == '#') {
+   return;
+  }
+  let target = a.href.split('#')[1];
+  let targetTop = $('#'+ target).offset().top;
 
-var mainMenuItems = document.querySelectorAll(".main-menu, .item");
-
-
-var clickAndScroll = function() {
-
-  // console.log('scroll');
-  // animatedScrollTo(
-  //         document.body, // element to scroll with (most of times you want to scroll with whole <body>)
-  //         0, // target scrollY (0 means top of the page)
-  //         1000, // duration in ms
-  //         function() { // callback function that runs after the animation (optional)
-  //           console.log('done!')
-  //         }
-  //     );
-};
-
-for (var i = 0; i < mainMenuItems.length; i++) {
-    mainMenuItems[i].addEventListener('click', clickAndScroll, false);
+  $('html, body').animate({scrollTop:targetTop}, scrollDuration);
 }
 
-//   $(".main-menu .item").addEventListener('click', function () {
-//     animatedScrollTo(
-//         document.body, // element to scroll with (most of times you want to scroll with whole <body>)
-//         0, // target scrollY (0 means top of the page)
-//         10000, // duration in ms
-//         function() { // callback function that runs after the animation (optional)
-//           console.log('done!')
-//         }
-//     );
-// });
+document.addEventListener("DOMContentLoaded", function(event) {
+  let mainMenu = document.getElementsByClassName('main-menu')[0];
+  let items = mainMenu.getElementsByClassName('item');
+
+  Array.from(items).forEach (item => item.addEventListener ('click', onMenuItemClick));
+});
