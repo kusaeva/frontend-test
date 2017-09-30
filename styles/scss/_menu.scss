@@ -1,0 +1,66 @@
+.menu {
+  background-color: $light-gray;
+
+  .content {
+    height: 100%;
+  }
+  .page {
+    margin-top: 55px;
+    height: 100%;
+    $item-height: 282px;
+    display: grid;
+    grid-template-columns: 450px 1fr 450px;
+    grid-template-rows: $item-height $item-height $item-height;
+    width: 100%;
+    grid-row-gap: 55px;
+  }
+
+  .menu-dish {
+    $t: 12px;
+    $l: 15px;
+    font: 400 14px $font-main;
+    outline: 1px solid $orange;
+    outline-offset: -5px;
+    // padding-left: 16px;
+    position: relative;
+    .content {
+
+    }
+    .description {
+      position: absolute; top: $t; bottom: $t; left: $l; right: $t;
+      background-color: $white;
+      padding-top: 10px;
+      padding-left: 15px;
+      & > * {
+        padding-top: 10px;
+      }
+      p {
+        $m: 6px;
+        margin-top: $m;
+        margin-bottom: $m;
+      }
+      a {
+        display: block;
+      }
+    }
+    .image {
+      position: absolute; top: $t; bottom: $t; right: $t;
+      z-index: 1;
+      background:url(../../img/Layer-100.jpg) no-repeat;
+      background-size: cover;
+      width:150px;
+    }
+    .title {
+      font: 24px $font-italic;
+    }
+    .text {
+    }
+    .read-more {
+      color: black;
+      &:hover {
+        color: $dark-gray;
+        font-weight: 800;
+      }
+    }
+  }
+}

@@ -176,11 +176,63 @@ section {
   section .content {
     width: 100%; }
 
-.lunch-menu .dish {
-  height: 250px;
-  width: 100%;
-  background-color: blue;
-  border: 2px solid yellow; }
+.lunch-menu {
+  background-color: #ffffff; }
+  .lunch-menu .dish {
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    border: 2px solid yellow; }
+
+.menu {
+  background-color: #d1d1ca; }
+  .menu .content {
+    height: 100%; }
+  .menu .page {
+    margin-top: 55px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 450px 1fr 450px;
+    grid-template-rows: 282px 282px 282px;
+    width: 100%;
+    grid-row-gap: 55px; }
+  .menu .menu-dish {
+    font: 400 14px Raleway;
+    outline: 1px solid #f1ae84;
+    outline-offset: -5px;
+    position: relative; }
+    .menu .menu-dish .description {
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      left: 15px;
+      right: 12px;
+      background-color: #ffffff;
+      padding-top: 10px;
+      padding-left: 15px; }
+      .menu .menu-dish .description > * {
+        padding-top: 10px; }
+      .menu .menu-dish .description p {
+        margin-top: 6px;
+        margin-bottom: 6px; }
+      .menu .menu-dish .description a {
+        display: block; }
+    .menu .menu-dish .image {
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      right: 12px;
+      z-index: 1;
+      background: url(../../img/Layer-100.jpg) no-repeat;
+      background-size: cover;
+      width: 150px; }
+    .menu .menu-dish .title {
+      font: 24px DidotLH; }
+    .menu .menu-dish .read-more {
+      color: black; }
+      .menu .menu-dish .read-more:hover {
+        color: #1f1f21;
+        font-weight: 800; }
 
 .gallery {
   width: 100%;
@@ -250,20 +302,32 @@ section {
       background-color: #ffffff;
       outline: none !important; }
   .contacts input[type=text], .contacts textarea, .contacts button {
-    border: 1px solid #f2ab7f;
+    border: 1px solid #f1ae84;
     background-color: Transparent;
     background-repeat: no-repeat; }
   .contacts .google-map {
     position: relative;
-    right: 0;
-    width: 470px;
-    height: 233px;
-    background: url(../../img/google_maps.jpg) no-repeat center;
+    top: 68px;
+    width: 494px;
+    height: 264px;
+    background: Transparent;
+    border: 1px solid #f1ae84;
     -webkit-box-flex: 0 1 auto;
     -moz-box-flex: 0 1 auto;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
+    .contacts .google-map map {
+      outline: 1px solid #f1ae84;
+      outline-offset: -5px;
+      background-color: white;
+      width: 100%;
+      height: 100%; }
+    .contacts .google-map iframe {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 1; }
 
 footer {
   background-color: #1f1f21;
