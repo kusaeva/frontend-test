@@ -20,12 +20,8 @@
         width: 100%;
         height: 100%;
         outline: $outline solid $white;
-        outline-offset: -$outline;
-
+        outline-offset: -$outline + 1px;
       }
-
     }
-
-
   }
 }

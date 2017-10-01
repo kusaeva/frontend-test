@@ -5,15 +5,20 @@
     height: 100%;
   }
   .page {
-    margin-top: 55px;
-    margin-bottom: 68px;
-    height: 100%;
     $item-height: 282px;
-    display: grid;
-    grid-template-columns: 450px 1fr 450px;
-    grid-template-rows: $item-height $item-height $item-height;
+    $row-gap: 60px;
+
+    margin-bottom: 70px;
+    height: 100%;
     width: 100%;
-    grid-row-gap: 55px;
+
+    .row {
+      margin-top: $row-gap;
+
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-between);
+    }
   }
 
   .menu-dish {
@@ -21,6 +26,8 @@
     $l: 15px;
     position: relative;
     font: 400 14px $font-main;
+    width: 450px;
+    height: 280px;
     @include frame();
 
     .description {
@@ -83,4 +90,5 @@
       }
     }
   }
+
 }

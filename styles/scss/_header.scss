@@ -4,6 +4,7 @@ header {
 
   .main {
     height: calc(100vh - 50px);
+    position: relative;
   }
   .header-bg {
     height: 100%;
@@ -39,21 +40,29 @@ header {
   .logo {
     position: relative;
     left: 30px; top: 24px;
-    @include flex(auto);
+    @include flex(0 1 auto);
   }
   .center-block {
-    margin:0;
+    position: relative;
+    margin: auto;
+    z-index: 2;
     font: 800 62px $font-main;
     color: white;
-    align-self: center;
-    @include flex(1 1 auto);
+    @include align-self(center);
+    @include flex(1 1 0);
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
   }
   .welcome {
     font-size: 62px;
+    position: relative;
+    margin: 0 auto;
   }
   .phone-line {
     padding: 0;
     margin:0;
+    @include flex(0 1 auto);
   }
   .underline {
     width: 50px;

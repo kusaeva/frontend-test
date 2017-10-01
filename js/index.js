@@ -2,7 +2,7 @@ const scrollDuration = 400;
 
 function onMenuItemClick (e) {
   e.preventDefault ();
-  $(".main-menu .item.current").removeClass("current");
+  $('.main-menu .item.current').removeClass('current');
   $(this).addClass('current');
   let a = this.getElementsByTagName('a')[0];
   if (a.href.slice(-1) == '#') {
@@ -14,7 +14,7 @@ function onMenuItemClick (e) {
   $('html, body').animate({scrollTop:targetTop}, scrollDuration);
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener('DOMContentLoaded', function(event) {
   let mainMenu = document.getElementsByClassName('main-menu')[0];
   let items = mainMenu.getElementsByClassName('item');
 
