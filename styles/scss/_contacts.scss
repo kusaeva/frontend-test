@@ -1,8 +1,7 @@
 .contacts {
   font: 700 14px $font-main;
   height: 100%;
-  width: 100%;
-  background-color: $light-gray;
+  background-color: $bg-color;
 
   .content {
     @include flexbox();

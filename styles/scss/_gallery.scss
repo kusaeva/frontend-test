@@ -2,8 +2,9 @@
   width: 100%;
   padding:0;
   .header {
-    margin-left: $padding-main-left;
-    margin-right: $padding-main-right;
+    width: $width;
+    min-width:$min-width;
+    margin: auto;
   }
   .content {
     position: relative;

@@ -6,11 +6,10 @@ footer {
   bottom: 0;
 
   .footer-content {
-    position: absolute;
-    bottom: 32px;
-    width: 100%;
-    padding-left: $padding-main-left;
-    padding-right: $padding-main-right;
+    width: $width;
+    min-width: $min-width;
+    margin: auto;
+
     @include flexbox();
     @include flex-direction(row);
     @include justify-content(space-between);
@@ -47,12 +46,22 @@ footer {
     }
   }
   .social-network {
+    position: relative;
     background-color: $white;
-    margin-left: $padding-main-left;
-    margin-right: $padding-main-right - 32px;
+    width: $width;
+    min-width: $min-width;
+    margin: auto;
     height: 320px;
     margin-top: -66px;
-
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -32px;
+      border-right: 32px solid $white;
+      height: 100%;
+    }
     .text {
       position: relative;
       top: 50px;

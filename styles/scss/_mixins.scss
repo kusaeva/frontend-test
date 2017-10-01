@@ -48,3 +48,22 @@
 	-webkit-transform-origin: $origin;
           transform-origin: $origin;
 }
+
+@mixin p-margin (){
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+@mixin frame-image-offset () {
+  $t: 12px;
+  $l: 15px;
+  position: absolute; top: $t; bottom: $t; left: $l; right: $t;
+}
+@mixin frame-image-offsets ($t, $l) {
+  position: absolute; top: $t; bottom: $t; left: $l; right: $t;
+}
+
+@mixin frame (){
+  outline: 1px solid $orange;
+  outline-offset: -5px;
+}

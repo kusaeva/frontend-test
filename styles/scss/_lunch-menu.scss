@@ -1,11 +1,164 @@
 .lunch-menu {
   background-color: $white;
   .page {
+    margin-top: 55px;
   }
   .dish {
+    position: relative;
     height: 250px;
     width: 100%;
-    background-color: blue;
-    border: 2px solid yellow;
+    margin-bottom: 82px;
+    background-color: $white;
+    @include flexbox();
+    @include flex-direction(row);
+    .view{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background-color: $white;
+      @include flex(1 1 auto);
+
+      .image {
+        $height: 232px;
+        position: relative;
+        width: 330px;
+        height:$height;
+        background-size: cover;
+
+        &.left:after {
+          content:'';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border-bottom: $height solid $white;
+          border-left: $height solid transparent;
+        }
+        &.right:after {
+          content:'';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-bottom: $height solid $white;
+          border-right: $height solid transparent;
+        }
+        &.right {
+          margin-left: 140px;
+        }
+        &.dish1 {
+          background:url(../../img/gebacken.jpg) no-repeat center;
+        }
+        &.dish2 {
+          background:url(../../img/brushetta.jpg) no-repeat center;
+        }
+        &.dish3 {
+          background:url(../../img/tallianette.jpg) no-repeat center;
+        }
+      }
+      .info {
+        position: absolute;
+        bottom: 15px;
+        color: black;
+        margin-right: 30px;
+
+        h1 {
+          display: block;
+          font: 32px $font-italic;
+          margin-bottom: 30px;
+        }
+        p {
+          font: 400 14px $font-main;
+          @include p-margin();
+        }
+        &.right {
+          text-align: right;
+          right: 0px;
+          left:0;
+
+        }
+        &.left {
+          text-align: left;
+          left:15px;
+          right:0;
+        }
+      }
+    }
+    .price {
+      width: 50%;
+      height: 100%;
+      @include flex(1 1 auto);
+      @include flexbox;
+      @include justify-content(center);
+      .dish-img {
+        margin:auto;
+        width:136px;
+        height: 96px;
+        background: url(../../img/dish.png) no-repeat;
+        background-size: cover;
+        @include flexbox();
+        @include justify-content(center);
+      }
+      .text {
+        font: 24px $font-italic;
+        color: black;
+        margin: auto;
+      }
+    }
+  }
+  .text-info {
+    font:16px $font-italic;
+    color: black;
+    text-align: center;
+    p {
+      @include p-margin();
+    }
+  }
+
+  .actions {
+    .title {
+      font: 36px $font-italic;
+      color: $beige;
+      text-align: center;
+      margin-top:44px;
+      margin-bottom: 44px;
+    }
+    .images{
+
+    }
+    ul {
+      list-style: none;
+      margin-left: 60px;
+      margin-right: 60px;
+      padding: 0;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      position: relative;
+      li {
+        position: relative;
+        display: block;
+        width:240px;
+        height:300px;
+        outline: 1px solid $orange;
+
+        & div {
+          background-size: cover;
+          @include frame-image-offsets(10px, 10px);
+        }
+        &.action1 div {
+          background: url(../../img/first.jpg) no-repeat;
+        }
+        &.action2 div {
+          background: url(../../img/second.jpg) no-repeat;
+        }
+        &.action3 div {
+          background: url(../../img/third.jpg) no-repeat;
+        }
+      }
+    }
+    .dots {
+      margin-top: 26px;
+      margin-bottom: 26px;
+      height: 18px;
+    }
   }
 }

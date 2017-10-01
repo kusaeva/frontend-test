@@ -148,12 +148,12 @@ header {
         color: #303332; }
 
 section {
-  margin: 0;
-  padding-left: 137px;
-  padding-right: 117px; }
+  margin: auto;
+  width: 1000px;
+  min-width: 900px; }
   section .header {
     height: 100px;
-    min-width: 900px;
+    width: 100%;
     background: #1f1f21;
     /* Old browsers */
     background: -moz-linear-gradient(top, #1f1f21 0%, #1f1f21 16%, #272729 47%, #272729 64%, #1f1f21 100%);
@@ -174,20 +174,185 @@ section {
       background-color: #f2ab7f;
       height: 1px;
       width: 100%; }
+    section .header .line-bolder {
+      background-color: #f2ab7f;
+      height: 3px;
+      width: 69px;
+      margin: 0 auto; }
   section .content {
-    width: 100%;
-    min-width: 900px; }
+    width: 100%; }
 
 .lunch-menu {
   background-color: #ffffff; }
+  .lunch-menu .page {
+    margin-top: 55px; }
   .lunch-menu .dish {
+    position: relative;
     height: 250px;
     width: 100%;
-    background-color: blue;
-    border: 2px solid yellow; }
+    margin-bottom: 82px;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .lunch-menu .dish .view {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background-color: #ffffff;
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+      .lunch-menu .dish .view .image {
+        position: relative;
+        width: 330px;
+        height: 232px;
+        background-size: cover; }
+        .lunch-menu .dish .view .image.left:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border-bottom: 232px solid #ffffff;
+          border-left: 232px solid transparent; }
+        .lunch-menu .dish .view .image.right:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-bottom: 232px solid #ffffff;
+          border-right: 232px solid transparent; }
+        .lunch-menu .dish .view .image.right {
+          margin-left: 140px; }
+        .lunch-menu .dish .view .image.dish1 {
+          background: url(../../img/gebacken.jpg) no-repeat center; }
+        .lunch-menu .dish .view .image.dish2 {
+          background: url(../../img/brushetta.jpg) no-repeat center; }
+        .lunch-menu .dish .view .image.dish3 {
+          background: url(../../img/tallianette.jpg) no-repeat center; }
+      .lunch-menu .dish .view .info {
+        position: absolute;
+        bottom: 15px;
+        color: black;
+        margin-right: 30px; }
+        .lunch-menu .dish .view .info h1 {
+          display: block;
+          font: 32px DidotLH;
+          margin-bottom: 30px; }
+        .lunch-menu .dish .view .info p {
+          font: 400 14px Raleway;
+          margin-top: 6px;
+          margin-bottom: 6px; }
+        .lunch-menu .dish .view .info.right {
+          text-align: right;
+          right: 0px;
+          left: 0; }
+        .lunch-menu .dish .view .info.left {
+          text-align: left;
+          left: 15px;
+          right: 0; }
+    .lunch-menu .dish .price {
+      width: 50%;
+      height: 100%;
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center; }
+      .lunch-menu .dish .price .dish-img {
+        margin: auto;
+        width: 136px;
+        height: 96px;
+        background: url(../../img/dish.png) no-repeat;
+        background-size: cover;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center; }
+      .lunch-menu .dish .price .text {
+        font: 24px DidotLH;
+        color: black;
+        margin: auto; }
+  .lunch-menu .text-info {
+    font: 16px DidotLH;
+    color: black;
+    text-align: center; }
+    .lunch-menu .text-info p {
+      margin-top: 6px;
+      margin-bottom: 6px; }
+  .lunch-menu .actions .title {
+    font: 36px DidotLH;
+    color: #f2ab7f;
+    text-align: center;
+    margin-top: 44px;
+    margin-bottom: 44px; }
+  .lunch-menu .actions ul {
+    list-style: none;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    position: relative; }
+    .lunch-menu .actions ul li {
+      position: relative;
+      display: block;
+      width: 240px;
+      height: 300px;
+      outline: 1px solid #f1ae84; }
+      .lunch-menu .actions ul li div {
+        background-size: cover;
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px; }
+      .lunch-menu .actions ul li.action1 div {
+        background: url(../../img/first.jpg) no-repeat; }
+      .lunch-menu .actions ul li.action2 div {
+        background: url(../../img/second.jpg) no-repeat; }
+      .lunch-menu .actions ul li.action3 div {
+        background: url(../../img/third.jpg) no-repeat; }
+  .lunch-menu .actions .dots {
+    margin-top: 26px;
+    margin-bottom: 26px;
+    height: 18px; }
 
 .menu {
-  background-color: #d1d1ca; }
+  background-color: #e0dccd; }
   .menu .content {
     height: 100%; }
   .menu .page {
@@ -200,10 +365,10 @@ section {
     width: 100%;
     grid-row-gap: 55px; }
   .menu .menu-dish {
+    position: relative;
     font: 400 14px Raleway;
     outline: 1px solid #f1ae84;
-    outline-offset: -5px;
-    position: relative; }
+    outline-offset: -5px; }
     .menu .menu-dish .description {
       position: absolute;
       top: 12px;
@@ -260,8 +425,9 @@ section {
   width: 100%;
   padding: 0; }
   .gallery .header {
-    margin-left: 137px;
-    margin-right: 117px; }
+    width: 1000px;
+    min-width: 900px;
+    margin: auto; }
   .gallery .content {
     position: relative;
     height: 100%;
@@ -279,8 +445,7 @@ section {
 .contacts {
   font: 700 14px Raleway;
   height: 100%;
-  width: 100%;
-  background-color: #d1d1ca; }
+  background-color: #e0dccd; }
   .contacts .content {
     display: -webkit-box;
     display: -moz-box;
@@ -358,11 +523,9 @@ footer {
   position: relative;
   bottom: 0; }
   footer .footer-content {
-    position: absolute;
-    bottom: 32px;
-    width: 100%;
-    padding-left: 137px;
-    padding-right: 117px;
+    width: 1000px;
+    min-width: 900px;
+    margin: auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -429,11 +592,21 @@ footer {
       footer .footer-content .column .bartender {
         width: 33px; }
   footer .social-network {
+    position: relative;
     background-color: #ffffff;
-    margin-left: 137px;
-    margin-right: 85px;
+    width: 1000px;
+    min-width: 900px;
+    margin: auto;
     height: 320px;
     margin-top: -66px; }
+    footer .social-network:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -32px;
+      border-right: 32px solid #ffffff;
+      height: 100%; }
     footer .social-network .text {
       position: relative;
       top: 50px;

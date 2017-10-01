@@ -1,5 +1,5 @@
 .menu {
-  background-color: $light-gray;
+  background-color: $bg-color;
 
   .content {
     height: 100%;
@@ -19,16 +19,12 @@
   .menu-dish {
     $t: 12px;
     $l: 15px;
-    font: 400 14px $font-main;
-    outline: 1px solid $orange;
-    outline-offset: -5px;
-    // padding-left: 16px;
     position: relative;
-    .content {
+    font: 400 14px $font-main;
+    @include frame();
 
-    }
     .description {
-      position: absolute; top: $t; bottom: $t; left: $l; right: $t;
+      @include frame-image-offset();
       background-color: $white;
       padding-top: 10px;
       padding-left: 15px;
@@ -36,9 +32,7 @@
         padding-top: 10px;
       }
       p {
-        $m: 6px;
-        margin-top: $m;
-        margin-bottom: $m;
+        @include p-margin();
       }
       a {
         display: block;

@@ -1,12 +1,13 @@
 section {
-  margin: 0;
-  padding-left: $padding-main-left;
-  padding-right: $padding-main-right;
+  margin: auto;
+  // padding-left: $padding-main-left;
+  // padding-right: $padding-main-right;
+  width: $width;
+  min-width: $min-width;
 
   .header {
     height: 100px;
-    min-width: 900px;
-
+    width: 100%;
     background: #1f1f21; /* Old browsers */
     background: -moz-linear-gradient(top, #1f1f21 0%, #1f1f21 16%, #272729 47%, #272729 64%, #1f1f21 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #1f1f21 0%,#1f1f21 16%,#272729 47%,#272729 64%,#1f1f21 100%); /* Chrome10-25,Safari5.1-6 */
@@ -25,10 +26,15 @@ section {
       height: 1px;
       width: 100%;
     }
+    .line-bolder {
+      background-color: $beige;
+      height: 3px;
+      width: 69px;
+      margin: 0 auto;
+    }
   }
 
   .content {
     width: 100%;
-    min-width: 900px;
   }
 }
